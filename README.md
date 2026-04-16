@@ -54,3 +54,45 @@ Dean De Cock diseñó el dataset de forma que muchos “NA” tienen significado
 
 
 Importante para real estate: estos “NA” son información valiosa. Una casa sin piscina suele valer menos que una con piscina. Por eso no debemos eliminar las filas; debemos tratarlos como una categoría (“Sin piscina”, “Sin garaje”, etc.).
+
+___
+
+## Actividad 2
+
+### Situación
+Sin duda es un buen comienzo el procesamiento de datos realizados al dataset “Ames Housing Dataset”. Durante la mañana del próximo lunes serán revisados los resultados iniciales del procesamiento de datos que usted realizó. En la junta se precisa avanzar con el modelo de regresión lineal. 
+Para avanzar en esta tarea, se pide cuantificar los datos nan ordenando de mayor a menor las variables que contienen valores.
+Luego se pide crear una función y ejecutarla de modo de eliminar los datos de las columnas detectadas.
+Identificados los datos nan y null, se requiere eliminar dicha data desde el data frame.
+Con el data frame limpio se pide dividir el conjunto de datos df_train y df_test con un test size 0.2 y un random state 42.
+Cargar el modelo de regresión lineal. Luego, usando las variables X_train e Y_train, procediendo a calcular el precio de las variables. Se requiere print con el valor de la predicción y el valor real de las viviendas.
+Finalmente, se pide estimar el valor del modelo de regresión mediante MSE.
+
+### Consigna
+Se solicita diseñar un modelo de regresión lineal usando la variable objetivo SalePrice.
+
+___
+
+
+### Data Set utilizdo, se encuenta en Kaggle HamesHousing.csv
+Contiene información de RealState
+
+___
+
+### Librerias utilizadas
+* pandas 
+* numpy 
+* sklearn.model_selection import train_test_split
+* sklearn.linear_model import LinearRegression
+* sklearn.metrics import mean_squared_error
+
+___
+
+### Notas importantes
+* Si el dataset tiene muchas columnas categóricas, usa pd.get_dummies() para convertir.
+
+* Si hay valores infinitos o muy extremos, considera aplicar np.log1p a SalePrice.
+
+* Asegúrate de que X_train e y_train sean del mismo largo.
+
+* El random_state=42 garantiza reproducibilidad.
